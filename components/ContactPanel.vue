@@ -25,7 +25,9 @@ const contacts = [
     <p class="contact-title">Contact</p>
 
     <div class="icons-container">
-      <Icon v-for="contact in contacts" :name="contact.icon" size="50" class="contact-icon"/>
+      <a v-for="contact in contacts" :key="contact.icon" :href="contact.link" target="_blank">
+        <Icon :name="contact.icon" size="50" class="contact-icon"/>
+      </a>
     </div>
   </div>
 </template>

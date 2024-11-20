@@ -8,15 +8,15 @@ const projects = [
     links: [
       {
         name: 'GitHub',
-        url: 'https://github.com'
+        url: 'https://github.com/Gugustinette/rocket-starflop'
       },
       {
-        name: 'Site Web',
-        url: 'https://site.com'
+        name: 'Jeu en ligne',
+        url: 'https://gugustinette.github.io/rocket-starflop/'
       },
       {
         name: 'Vidéo',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        url: 'https://youtu.be/fxYmKtQgu7E?si=PROibbQNmKUgWZd4&t=507'
       }
     ]
   },
@@ -26,10 +26,6 @@ const projects = [
     description: 'Mizuka est un bot Discord permettant la gestion d\'un serveur Discord de 60 000 membres anglophone et francophone. Il gère l\'expérience, des salons vocaux personnalisés, un shop, des commandes de modération et d\'autres. Gestion d\'un VPS pour le bot.',
     technologies: ['Java', 'MongoDB', 'JDA'],
     links: [
-      {
-        name: 'GitHub',
-        url: 'https://github.com'
-      },
       {
         name: 'Discord',
         url: 'https://discord.gg/friends'
@@ -55,7 +51,7 @@ const projects = [
         <img alt="Image du projet" :src="project.image" class="project-card-image">
         <p class="project-card-description">{{ project.description }}</p>
         <div class="project-card-links">
-          <a v-for="link in project.links" :key="link.name" :href="link.url">{{ link.name }}</a>
+          <a v-for="link in project.links" :key="link.name" :href="link.url" target="_blank">{{ link.name }}</a>
         </div>
       </div>
     </div>
