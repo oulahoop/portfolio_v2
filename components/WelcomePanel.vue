@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="welcome-container">
+  <div class="welcome-container" id="welcome-panel">
     <p>Je suis un développeur web passionné</p>
     <p class="welcome-title">Développeur Full-Stack</p>
   </div>
@@ -15,7 +15,7 @@
     flex-direction: column;
     text-align: left;
     padding: 150px 5%;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
   }
 
   .welcome-container p {
@@ -28,5 +28,17 @@
   .welcome-container .welcome-title {
     font-weight: 400;
     color: #767676;
+  }
+
+  @media (max-width: 768px) {
+    .welcome-container p {
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .welcome-container p {
+      font-size: 3rem;
+    }
   }
 </style>

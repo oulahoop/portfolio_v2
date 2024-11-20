@@ -5,25 +5,25 @@
 <template>
   <div class="header-container">
     <div class="header-left-content">
-      <p class="header-title">Maël Caubere</p>
+      <a href="#welcome-panel" class="header-title">Maël Caubere</a>
     </div>
 
     <div class="header-right-content">
       <ul class="header-menu">
         <li>
-          <a href="#">Projets</a>
+          <a href="#projects-panel">Projets</a>
         </li>
         <li>
-          <a href="#">Expériences</a>
+          <a href="#experiences-panel">Expériences</a>
+        </li>
+        <!--<li>
+          <a href="#skills-panel">Compétences</a>
         </li>
         <li>
-          <a href="#">Compétences</a>
-        </li>
+          <a href="#formation-panel">Formations</a>
+        </li>-->
         <li>
-          <a href="#">Formations</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
+          <a href="#contact-panel">Contact</a>
         </li>
       </ul>
     </div>
@@ -40,6 +40,8 @@
     position: sticky;
     top: 0;
     background-color: #F9F9F9;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .header-left-content {
@@ -57,6 +59,8 @@
   .header-title {
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
   }
 
   .header-menu {
@@ -79,22 +83,29 @@
 
   @media (max-width: 768px) {
     .header-container {
-      flex-direction: column;
-      height: auto;
+      padding: 0 10px;
     }
 
-    .header-right-content {
-      margin-top: 20px;
+    .header-title {
+      font-size: 1.2rem;
+    }
+
+    .header-menu li {
+      margin: 0 5px;
     }
   }
 
   @media (max-width: 480px) {
     .header-menu {
-      flex-direction: column;
+      display: none;
     }
 
-    .header-menu li {
-      margin: 10px 0;
+    .header-right-content {
+      display: none;
+    }
+
+    .header-container {
+      justify-content: center;
     }
   }
 </style>

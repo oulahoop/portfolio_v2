@@ -1,0 +1,28 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <div class="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#333" fill-opacity="1" d="M0,224L48,197.3C96,171,192,117,288,101.3C384,85,480,107,576,122.7C672,139,768,149,864,170.7C960,192,1056,224,1152,208C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <div class="footer-container">
+      <p>Maël Caubere - 2024</p>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: -10px;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .footer-container p {
+    font-size: 1.5rem;
+  }
+</style>

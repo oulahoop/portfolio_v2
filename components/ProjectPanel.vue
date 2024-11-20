@@ -2,7 +2,7 @@
 const projects = [
   {
     title: 'Rocket Starflop',
-    image: 'https://placehold.co/600x400/EEE/31343C',
+    image: '/portfolio_v2/projects/rocket-starflop.png',
     description: 'Rocket Starflop est un jeu vidéo 3D développé en TypeScript avec le moteur de jeu Fibbo. Réalisé avec Augustin MERCIER à l\'occasion d\'un challenge de Benjamin Code.',
     technologies: ['TypeScript', 'Fibbo'],
     links: [
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: 'Mizuka',
-    image: 'https://placehold.co/600x400/EEE/31343C',
+    image: '/portfolio_v2/projects/mizuka.png',
     description: 'Mizuka est un bot Discord permettant la gestion d\'un serveur Discord de 60 000 membres anglophone et francophone. Il gère l\'expérience, des salons vocaux personnalisés, un shop, des commandes de modération et d\'autres. Gestion d\'un VPS pour le bot.',
     technologies: ['Java', 'MongoDB', 'JDA'],
     links: [
@@ -46,7 +46,7 @@ const projects = [
 </script>
 
 <template>
-  <div class="project-container">
+  <div class="project-container" id="projects-panel">
     <p class="project-title">Mes Projets</p>
 
     <div class="project-content">
@@ -68,7 +68,7 @@ const projects = [
     flex-direction: column;
     text-align: left;
     padding: 150px 5%;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     background-color: #FBFBFB;
     gap: 100px;
   }
@@ -103,6 +103,8 @@ const projects = [
   .project-card-image {
     width: 100%;
     margin-top: 20px;
+    height: 200px;
+    object-fit: cover;
   }
 
   .project-card-description {
@@ -132,7 +134,7 @@ const projects = [
     color: #000;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     .project-content {
       flex-direction: column;
     }

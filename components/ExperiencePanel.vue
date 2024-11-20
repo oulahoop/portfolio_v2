@@ -25,7 +25,7 @@ const experiences = [
 </script>
 
 <template>
-  <div class="experience-container">
+  <div class="experience-container" id="experiences-panel">
     <p class="experience-title">Mes Expériences</p>
 
     <div class="experience-content">
@@ -52,7 +52,7 @@ const experiences = [
     flex-direction: column;
     text-align: left;
     padding: 150px 5%;
-    height: calc(100vh);
+    min-height: calc(100vh);
     background-color: #FBFBFB;
     gap: 100px;
   }
@@ -175,9 +175,17 @@ const experiences = [
       margin-bottom: 20px;
     }
 
-    .experience-card + .experience-card {
-      border-left: none;
-      border-top: 1px solid #000;
+    .experience-card-subtitle {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .experience-card-title {
+      text-align: left;
+    }
+
+    .experience-card-skills {
+      flex-wrap: wrap;
     }
   }
 </style>
